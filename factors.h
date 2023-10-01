@@ -3,6 +3,6 @@
 
 #include <stdint.h>
 
-long long int *get_factors(long long int number);
+long int *get_factors(long int number);
 
 #endif

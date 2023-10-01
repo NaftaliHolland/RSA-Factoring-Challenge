@@ -11,9 +11,9 @@
  *
  */
 
-long long int *get_factors(long long int number)
+long int *get_factors(long int number)
 {
-	long long int i, j, *factors;
+	long int i, j, *factors;
 
 	factors = malloc(sizeof(int) * 2);
 	if (factors == NULL)
@@ -35,4 +35,5 @@ long long int *get_factors(long long int number)
 			}
 		}
 	}
+	return(factors);
 }

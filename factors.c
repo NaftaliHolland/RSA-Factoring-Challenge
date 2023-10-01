@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	FILE *file;
 	char *line;
 	size_t n;
-	long long int number, *factors;
+	long int number, *factors;
 	int bytes_read;
 
 	if (argc < 2)
@@ -37,9 +37,9 @@ int main(int argc, char **argv)
 	while ((bytes_read = getline(&line, &n, file)) > 0)
 	{
 
-		number = strtoull(line, NULL, 10);
+		number = strtol(line, NULL, 10);
 		factors = get_factors(number);
-		printf("%lld=%lld*%lld\n", number, factors[0], factors[1]);
+		printf("%ld=%ld*%ld\n", number, factors[0], factors[1]);
 	}
 
 	return (0);
